@@ -73,12 +73,10 @@ def main(args):
     attack=args.attack
     sd_start=args.sd_start
     num_sd=args.num_sd
-    attack='bim'
     for sd in range(sd_start,sd_start+num_sd):
         print("seed: "+str(sd))
         with_norm=False
         batch_size=256
-        #main(attack,with_norm,batch_size)
         np.random.seed(sd)
         idx0=np.random.choice(10000,5000)
         dataset='mnist'
