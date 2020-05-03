@@ -237,7 +237,7 @@ def main(args):
                 text_file.write(res_reclf+"\n")
 
 
-                text_file.close()
+        text_file.close()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
