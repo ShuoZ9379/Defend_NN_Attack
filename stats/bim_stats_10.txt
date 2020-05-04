@@ -1,0 +1,6 @@
+C: 5, H: 0.00697275809943676, L: 0.001719706750009209
+Detection Acc: 96.0%, False Negative: 171, False Positive: 221, True Negative: 4729, True Positive: 4779.
+Reclassification Acc: 95.5%, Clean Correct Acc: 95.5%, Clean Incorrect Acc: 0.0%, Adv Correct Acc: 0.0%, Adv Incorrect Acc: 4.42%.
+C: 5, H: 0.0022, L: 0.0012
+Detection Acc: 96.0%, False Negative: 343, False Positive: 51, True Negative: 4899, True Positive: 4607.
+Reclassification Acc: 98.9%, Clean Correct Acc: 98.9%, Clean Incorrect Acc: 0.0%, Adv Correct Acc: 0.0%, Adv Incorrect Acc: 1.09%.

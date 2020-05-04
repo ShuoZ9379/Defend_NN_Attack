@@ -195,7 +195,7 @@ def main(args):
                 TP = CM[1][1]
                 FP = CM[0][1]
                 ACC_DETECT = (TP+TN)/(TP+TN+FP+FN)
-                res_detect = "C: " + str(C) + ", H: " + str(H)+ ", L: " + str(L) \
+                res_detect = "Seed: " + str(sd) + ", C: " + str(C) + ", H: " + str(H)+ ", L: " + str(L) \
                                 + "\nDetection Acc: " + str(ACC_DETECT*100)[:4] \
                                 + "%, False Negative: " + str(FN) + ", False Positive: " + str(FP) \
                                 + ", True Negative: " + str(TN) + ", True Positive: " + str(TP)+"."
