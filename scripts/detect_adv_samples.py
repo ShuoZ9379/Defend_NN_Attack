@@ -26,6 +26,8 @@ def crop_resize(X,batch_size):
         X_right_top = cv2.resize(new_X[:27,1:,:],dsize=(28,28),interpolation=cv2.INTER_CUBIC)
         X_right_bot = cv2.resize(new_X[1:,1:,:],dsize=(28,28),interpolation=cv2.INTER_CUBIC)
         X_proc = np.asarray([X_center,X_left_top,X_left_bot,X_right_top,X_right_bot])
+        if X_proc.ndim!=4:
+            X_proc=np.expand_dims(X_proc,axis=-1)
         X_proc = np.transpose(X_proc,(0,3,1,2))
         ls.append(X_proc)
     X_proc=np.concatenate(ls,axis=1)
@@ -71,6 +73,7 @@ def detect_clean_adv_v2(X, preds, uncert, model, C, H, L, batch_size):
     return label
 def main(args):
     attack=args.attack
+    text_file = open("../stats/"+attack+"_stats.txt", "w")
     sd_start=args.sd_start
     num_sd=args.num_sd
     for sd in range(sd_start,sd_start+num_sd):
@@ -80,7 +83,6 @@ def main(args):
         np.random.seed(sd)
         idx0=np.random.choice(10000,5000)
         dataset='mnist'
-        text_file = open("../stats/"+attack+"_stats.txt", "w")
         assert attack in ['fgsm', 'bim', 'bim-a', 'bim-b', 'jsma'], \
             "Attack parameter must be either 'fgsm', 'bim', bim-a', 'bim-b', 'jsma'"
         assert os.path.isfile('../data/model_%s.h5' % dataset), \
@@ -235,7 +237,7 @@ def main(args):
                 text_file.write(res_reclf+"\n")
 
 
-        text_file.close()
+    text_file.close()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
