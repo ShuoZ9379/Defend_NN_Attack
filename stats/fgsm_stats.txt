@@ -1,0 +1,6 @@
+Seed: 21, C: 5, H: 0.0007110681908670813, L: 4.4187429011799395e-05
+Detection Acc: 92.8%, False Negative: 527, False Positive: 186, True Negative: 4774, True Positive: 4433.
+Reclassification Acc: 96.168%, Clean Correct Acc: 95.9%, Clean Incorrect Acc: 0.0%, Adv Correct Acc: 0.19%, Adv Incorrect Acc: 3.83%.
+Seed: 21, C: 5, H: 0.002, L: 3e-06
+Detection Acc: 91.6%, False Negative: 344, False Positive: 488, True Negative: 4472, True Positive: 4616.
+Reclassification Acc: 92.339%, Clean Correct Acc: 90.4%, Clean Incorrect Acc: 0.0%, Adv Correct Acc: 1.90%, Adv Incorrect Acc: 7.66%.
